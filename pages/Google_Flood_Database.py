@@ -6,9 +6,6 @@ st.set_page_config(layout="wide")
 st.title("Global Flood Database")
 
 # ee.Authenticate()
-if not ee.data._initialized:
-    ee.Authenticate()
-    ee.Initialize()
 
 Map = geemap.Map()
 Map.setOptions('SATELLITE')
