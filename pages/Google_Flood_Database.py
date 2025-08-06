@@ -14,7 +14,7 @@ Map = geemap.Map()
 Map.setOptions('SATELLITE')
 
 gfd = ee.ImageCollection('GLOBAL_FLOOD_DB/MODIS_EVENTS/V1')
-# event list
+# event list (913 of flood event gfd database)
 event_list = gfd.limit(913).map(
     lambda img: img.set('label', ee.String('event ID: ')
                         .cat(img.get('id'))
